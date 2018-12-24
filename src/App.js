@@ -23,9 +23,9 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
         </header>
-        {/* <div>
+        <div>
           <span className="btn" onClick={this.addWindow}>增加窗口</span>
-        </div> */}
+        </div>
         <div className="window-box">{
           chartWindows.map((item, idx) => (<ChartWin key={idx} />))
         }</div>
