@@ -1,0 +1,45 @@
+.chart-window {
+    padding: 20px;
+    margin: 10px;
+    border: 1px dashed #e1e1e1;
+}
+
+.chart-window .message-box {
+    min-height: 200px;
+    max-height: 400px;
+    overflow: auto;
+}
+.msg-item {
+
+}
+.msg {
+    color: green;
+}
+.msg.out {
+    text-align: right;
+    color: darkgoldenrod;
+}
+.system-msg {
+    font-size: 12px;
+    color: #999;
+    text-align: center;
+    background-color: #f8f8f8;
+    padding: 1px 4px;
+    border-radius: 4px;
+}
+.chart-window .textarea {
+    height: 15px;
+    resize: none;
+    margin-right: 10px;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #e1e1e1;
+    border-radius: 2px;
+    outline: none;
+}
+.textarea::placeholder {
+    color: #ccc;
+}
+.chart-window .btn {
+
+}

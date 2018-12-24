@@ -1,25 +1,34 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import ChartWin from './components/ChartWindow';
 import './App.css';
 
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      chartWindows: [{}]
+    }
+  }
+  componentDidMount() {
+    
+  }
+  addWindow = () => {
+    const windows = this.state.chartWindows.concat([]);
+    windows.push({});
+    this.setState({ chartWindows: windows });
+  }
   render() {
+    const { chartWindows } = this.state;
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
         </header>
+        {/* <div>
+          <span className="btn" onClick={this.addWindow}>增加窗口</span>
+        </div> */}
+        <div className="window-box">{
+          chartWindows.map((item, idx) => (<ChartWin key={idx} />))
+        }</div>
       </div>
     );
   }
